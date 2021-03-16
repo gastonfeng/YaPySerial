@@ -97,7 +97,7 @@ static void serial_flush(const serial_t *h)
 static void serial_close(serial_t *h)
 {
     serial_flush(h);
-    SetCommState(h->fd, &h->oldtio);
+//    SetCommState(h->fd, &h->oldtio);
     CloseHandle(h->fd);
     free(h);
 }
